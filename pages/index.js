@@ -130,7 +130,7 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between py-20 px-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between bg-white py-20 px-24 ${inter.className}`}
     >
       <div className="text-center pb-10">
         <p className="text-3xl pb-5 font-semibold">Trip Wallet API</p>
@@ -140,7 +140,7 @@ export default function Home() {
       <div className="card mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
         {endpoints.map((endpoint, index) => (
           <div
-            className={`card group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30`}
+            className={`card group rounded-lg border-2 border-grey-100 px-5 py-4 m-4`}
             key={index}
           >
             <h2 className={`mb-3 text-2xl font-semibold`}>{endpoint.name}</h2>
@@ -151,7 +151,7 @@ export default function Home() {
               <>
                 <br />
                 <p>Required parameters:</p>
-                <ul className="pl-10">
+                <ul className="">
                   {endpoint.parameters.map((parameter, parameterIndex) => (
                     <li key={parameterIndex} className="list-disc">
                       <b>{parameter.name}</b>: {parameter.description}
