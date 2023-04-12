@@ -130,9 +130,9 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between py-20 px-24 ${inter.className}`}
     >
-      <div className="text-center">
+      <div className="text-center pb-10">
         <p className="text-3xl pb-5 font-semibold">Trip Wallet API</p>
         <p className="pb-5">API Documentation</p>
       </div>
@@ -151,13 +151,22 @@ export default function Home() {
               <>
                 <br />
                 <p>Required parameters:</p>
-                <ul>
+                <ul className="pl-10">
                   {endpoint.parameters.map((parameter, parameterIndex) => (
                     <li key={parameterIndex} className="list-disc">
                       <b>{parameter.name}</b>: {parameter.description}
                     </li>
                   ))}
                 </ul>
+              </>
+            )}
+            {endpoint.response && (
+              <>
+                <br />
+                <p>Sample response:</p>
+                <pre>
+                  <code>{endpoint.response}</code>
+                </pre>
               </>
             )}
           </div>
