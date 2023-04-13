@@ -153,7 +153,7 @@ export default function Home() {
                 <p>Required parameters:</p>
                 <ul>
                   {endpoint.parameters.map((parameter, parameterIndex) => (
-                    <li key={parameterIndex}>
+                    <li key={parameterIndex} className="list-disc">
                       <b>{parameter.name}</b>: {parameter.description}
                     </li>
                   ))}
