@@ -36,10 +36,34 @@ export default function Home() {
     {
       name: "PUT /expenses/:id",
       description: "Edit a specific expense",
+      parameter: [
+        {
+          name: "id",
+          description: "*required* the number that identifies the expense",
+        },
+        {
+          name: "trip",
+          description: "(optional) the number that identifies the trip",
+        },
+        { name: "name", description: "(optional) the name of the expense" },
+        { name: "date", description: "(optional) the date of the expense" },
+        { name: "amount", description: "(optional) the amount of the expense" },
+        {
+          name: "currency",
+          description: "(optional) the currency of the amount expennse",
+        },
+      ],
     },
     {
       name: "DELETE /expense",
       description: "Delete a specific expense",
+      parameter: [
+        {
+          name: "id",
+          description:
+            "*required* this is the number that identifies the expense",
+        },
+      ],
     },
   ];
 
