@@ -21,6 +21,26 @@ export default function Home() {
       name: "PUT /trips/:id",
       description: "Edit a trip",
     },
+    {
+      name: "DELETE /trips/:id",
+      description: "Delete a specific trip",
+    },
+    {
+      name: "POST /expenses",
+      description: "Create a new expense",
+    },
+    {
+      name: "GET /expenses/:id",
+      description: "Get the details of a specific expense",
+    },
+    {
+      name: "PUT /expenses/:id",
+      description: "Edit a specific expense",
+    },
+    {
+      name: "DELETE /expense",
+      description: "Delete a specific expense",
+    },
   ];
 
   return (
