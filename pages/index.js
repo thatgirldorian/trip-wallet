@@ -42,6 +42,19 @@ export default function Home() {
             <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
               {endpoint.description}
             </p>
+            {endpoint.parameters && (
+              <>
+                <br />
+                <p>Required parameters:</p>
+                <ul>
+                  {endpoint.parameters.map((parameter, parameterIndex) => (
+                    <li key={parameterIndex}>
+                      <b>{parameter.name}</b>: {parameter.description}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
         ))}
       </div>
