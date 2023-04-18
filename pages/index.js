@@ -32,34 +32,18 @@ export default function Home() {
         <p className="pb-5">API Documentation</p>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className={`mb-3 text-2xl font-semibold`}>GET /trips </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            List all the trips for a user
-          </p>
-        </div>
-
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className={`mb-3 text-2xl font-semibold`}>GET /trips</h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Get the details of a specific trip
-          </p>
-        </div>
-
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className={`mb-3 text-2xl font-semibold`}>POST /trip</h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Create a new trip
-          </p>
-        </div>
-
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className={`mb-3 text-2xl font-semibold`}>PUT /trip</h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Edit a specific trip
-          </p>
-        </div>
+      <div className="card mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+        {endpoints.map((endpoint, index) => (
+          <div
+            className={`card group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30`}
+            key={index}
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>{endpoint.name}</h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              {endpoint.description}
+            </p>
+          </div>
+        ))}
       </div>
     </main>
   );
