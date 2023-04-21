@@ -4,6 +4,25 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const endpoints = [
+    {
+      name: "GET /trips",
+      description: "List all the trips",
+    },
+    {
+      name: "POST /trips",
+      description: "Create a new trip",
+    },
+    {
+      name: "GET /trips/:id",
+      description: "Get the details of a specific trip",
+    },
+    {
+      name: "PUT /trips/:id",
+      description: "Edit a trip",
+    },
+  ];
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
