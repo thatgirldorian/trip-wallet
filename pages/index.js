@@ -8,8 +8,8 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div>
-        <p className="text-2xl pb-5">Trip Wallet API</p>
+      <div className="text-center">
+        <p className="text-3xl pb-5 font-semibold">Trip Wallet API</p>
         <p className="pb-5">API Documentation</p>
       </div>
 
