@@ -87,7 +87,7 @@ export default function Home() {
     {
       name: "GET /expenses/:id",
       description: "Get the details of a specific expense",
-      parameter: [
+      parameters: [
         {
           name: "id",
           description: "*required* the number that identifies the expense",
@@ -97,7 +97,7 @@ export default function Home() {
     {
       name: "PUT /expenses/:id",
       description: "Edit a specific expense",
-      parameter: [
+      parameters: [
         {
           name: "id",
           description: "*required* the number that identifies the expense",
@@ -118,7 +118,7 @@ export default function Home() {
     {
       name: "DELETE /expense",
       description: "Delete a specific expense",
-      parameter: [
+      parameters: [
         {
           name: "id",
           description:
