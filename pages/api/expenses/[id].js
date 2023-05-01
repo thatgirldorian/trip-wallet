@@ -30,6 +30,18 @@ export default async function handler(req, res) {
 
     return res.status(200).end();
   }
-  // if (req.method === "DELETE") {
-  // }
+
+  if (req.method === "DELETE") {
+    await prisma.expense.delete({
+      where: {
+        id: parseInt(req.query.id),
+      },
+    });
+
+    return res.status(200).end();
+  }
+
+  res.status(405).json({
+    message: "Method Not Allowed",
+  });
 }
