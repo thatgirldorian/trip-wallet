@@ -166,11 +166,11 @@ export default function Home() {
                 <p className="font-medium">Sample response:</p>
                 <div className="bg-green-100 text-[14px] p-2 my-2 rounded">
                   <code>
-                    <p> "id": 1, </p>
-                    <p>"user": 7,</p>
-                    <p>"name": "Maldives Trip",</p>
-                    <p>"start_date": "2023-02-15T11:20:15.000Z",</p>
-                    <p> "end_date": null</p>
+                    <p> id: 1, </p>
+                    <p>user: 7,</p>
+                    <p>name: Maldives Trip,</p>
+                    <p>start_date: 2023-02-15T11:20:15.000Z,</p>
+                    <p>end_date: null</p>
                   </code>
                 </div>
 
