@@ -4,6 +4,18 @@ import { ApiError } from "next/dist/server/api-utils";
 export default async function handler(req, res) {
   if (req.method === "GET") {
     const trips = await prisma.trip.findMany();
+
+    //add each trip to the expenses list
+    await Promise.all(
+      trips.map(async (trip) => {
+        trips.expenses = await prisma.expense.findMany({
+          where: {
+            trip: trip.id,
+          },
+        });
+      })
+    );
+
     res.status(200).json(trips);
     return;
   }
@@ -20,7 +32,7 @@ export default async function handler(req, res) {
     if (!name) {
       return res
         .status(400)
-        .json({ message: "Missing a requird paraneter: `name`" });
+        .json({ message: "Missing a requird parameter: `name`" });
     }
 
     await prisma.trip.create({
