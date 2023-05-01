@@ -153,7 +153,7 @@ export default function Home() {
                 <p>Required parameters:</p>
                 <ul className="">
                   {endpoint.parameters.map((parameter, parameterIndex) => (
-                    <li key={parameterIndex} className="list-disc">
+                    <li key={parameterIndex}>
                       <b>{parameter.name}</b>: {parameter.description}
                     </li>
                   ))}
@@ -163,7 +163,17 @@ export default function Home() {
             {endpoint.response && (
               <>
                 <br />
-                <p>Sample response:</p>
+                <p className="font-medium">Sample response:</p>
+                <div className="bg-green-100 text-[14px] p-2 my-2 rounded">
+                  <code>
+                    <p> "id": 1, </p>
+                    <p>"user": 7,</p>
+                    <p>"name": "Maldives Trip",</p>
+                    <p>"start_date": "2023-02-15T11:20:15.000Z",</p>
+                    <p> "end_date": null</p>
+                  </code>
+                </div>
+
                 <pre>
                   <code>{endpoint.response}</code>
                 </pre>
