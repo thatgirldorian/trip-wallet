@@ -133,7 +133,9 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between bg-white py-20 px-24 ${inter.className}`}
     >
       <div className="text-center pb-10">
-        <p className="text-3xl pb-5 font-semibold">Trip Wallet API</p>
+        <p className="text-3xl pb-5 font-semibold text-violet-500">
+          Trip Wallet API
+        </p>
         <p className="pb-5">API Documentation</p>
       </div>
 
@@ -181,6 +183,12 @@ export default function Home() {
             )}
           </div>
         ))}
+
+        <footer>
+          <button className="animate-bounce bg-violet-100 my-10 px-4 py-2 rounded-full text-violet-500 font-medium">
+            Got feedback?
+          </button>
+        </footer>
       </div>
     </main>
   );
